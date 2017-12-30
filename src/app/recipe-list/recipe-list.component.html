@@ -1,0 +1,87 @@
+<div class="page-container" ng-view flex>
+  <mat-toolbar>
+    <mat-icon class="recipe-box-icon">local_dining</mat-icon> <span>Recipe Box</span>
+  </mat-toolbar>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Appetizers
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list dense *ngFor="let recipe of dataService.appetizers">
+        <mat-list-item (click)="openRecipeViewDialog(recipe)"><mat-icon class="recipe-icon">featured_play_list</mat-icon>{{ recipe.name }}</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Bread
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list dense *ngFor="let recipe of dataService.breads">
+          <mat-list-item (click)="openRecipeViewDialog(recipe)"><mat-icon class="recipe-icon">featured_play_list</mat-icon>{{ recipe.name }}</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Breakfast
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list dense *ngFor="let recipe of dataService.breakfasts">
+          <mat-list-item (click)="openRecipeViewDialog(recipe)"><mat-icon class="recipe-icon">featured_play_list</mat-icon>{{ recipe.name }}</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Dessert
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list dense *ngFor="let recipe of dataService.desserts">
+          <mat-list-item (click)="openRecipeViewDialog(recipe)"><mat-icon class="recipe-icon">featured_play_list</mat-icon>{{ recipe.name }}</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Entree
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list dense *ngFor="let recipe of dataService.entrees">
+          <mat-list-item (click)="openRecipeViewDialog(recipe)"><mat-icon class="recipe-icon">featured_play_list</mat-icon>{{ recipe.name }}</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Sauce
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list dense *ngFor="let recipe of dataService.sauces">
+          <mat-list-item (click)="openRecipeViewDialog(recipe)"><mat-icon class="recipe-icon">featured_play_list</mat-icon>{{ recipe.name }}</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Side Dish
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list dense *ngFor="let recipe of dataService.sides">
+          <mat-list-item (click)="openRecipeViewDialog(recipe)"><mat-icon class="recipe-icon">featured_play_list</mat-icon>{{ recipe.name }}</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Miscellaneous
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list dense *ngFor="let recipe of dataService.misc">
+          <mat-list-item (click)="openRecipeViewDialog(recipe)"><mat-icon class="recipe-icon">featured_play_list</mat-icon>{{ recipe.name }}</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

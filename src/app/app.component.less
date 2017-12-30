@@ -1,0 +1,71 @@
+@fontFamily: Verdana;
+@fontSize: 12px;
+@primaryColor: #212121;
+@secondaryColor:#757575;
+@itemColor: #E0E0E0;
+
+body, html, .page-container
+{
+    font-family: @fontFamily !important;
+    font-size: @fontSize !important;
+    background-color: @primaryColor !important;
+}
+
+
+.mat-toolbar-row, .mat-toolbar-single-row
+{
+    font-family: @fontFamily !important;
+    font-size: 14px !important;
+    background-color: @primaryColor !important;
+    color: #FFFFFF !important;
+    height: 55px !important;
+}
+
+.mat-expansion-panel-header
+{
+    font-family: @fontFamily !important;
+    font-size: @fontSize !important;
+    background-color: @secondaryColor !important;
+    
+    height: 40px !important;
+}
+
+.mat-expansion-panel-header-title
+{
+    color: #FFFFFF !important;
+}
+.mat-expansion-indicator::after, .mat-expansion-panel-header-description
+{
+    color: #FFFFFF !important;
+}
+
+.mat-list[dense] .mat-list-item
+{
+    font-family: @fontFamily !important;
+    font-size: @fontSize !important;
+    background-color: @itemColor !important;
+    color: #000000 !important;
+    height: 30px !important;
+}
+
+.mat-expansion-panel
+{
+    background-color: @itemColor !important;
+}
+
+.mat-expansion-panel-spacing
+{
+    margin: 0px 0px !important;
+}
+
+.mat-expansion-panel-body
+{
+    padding: 0 24px 4px !important;
+}
+
+.mat-grid-tile .mat-figure
+{
+    justify-content: left !important;
+    align-items: left !important;
+    text-align: left !important;
+}
