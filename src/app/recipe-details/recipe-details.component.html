@@ -1,6 +1,6 @@
 <div class="recipe-bar">
     <span class="recipe-name">{{ recipe.name }}</span>
-    <span class="clear-icon"><mat-icon class="clear-icon">clear</mat-icon></span>
+    <span class="clear-icon"><mat-icon class="clear-icon" (click)="closeDialog()">clear</mat-icon></span>
 </div>
 <mat-grid-list cols="2" rowHeight="17px">
     <mat-grid-tile *ngFor="let ingredient of recipe.ingredient">{{ ingredient.name }}</mat-grid-tile>

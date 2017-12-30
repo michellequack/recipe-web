@@ -22,9 +22,6 @@ export class RecipeListComponent implements OnInit {
       width: '600px'
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
   }
 
 }

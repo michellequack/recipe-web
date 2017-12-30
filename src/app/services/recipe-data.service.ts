@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { Recipe, Ingredient} from '../models/recipe.models';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class RecipeDataService {
@@ -20,9 +21,11 @@ export class RecipeDataService {
   public soups: Recipe[];
   public misc: Recipe[];
 
+  private api_url: string = environment.api_url;
+
 
   getRecipes() {  
-      this.http.get<Recipe[]>('http://localhost/recipeapi/api/Recipes')
+      this.http.get<Recipe[]>(this.api_url + '/Recipes')
       .map(data => data as Recipe[])
       .subscribe(data => {
           this.appetizers = data.filter(r => r.category === "Appetizer");

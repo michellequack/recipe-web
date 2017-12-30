@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import {MAT_DIALOG_DATA, MatGridList} from '@angular/material';
+import {MAT_DIALOG_DATA, MatGridList, MatDialogRef} from '@angular/material';
 import { Recipe, Ingredient} from '../models/recipe.models';
 
 @Component({
@@ -11,7 +11,7 @@ export class RecipeDetailsComponent implements OnInit {
 
   public recipe: Recipe;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef: MatDialogRef<RecipeDetailsComponent>) {
     this.recipe = data.recipe;
    }
 
@@ -19,4 +19,7 @@ export class RecipeDetailsComponent implements OnInit {
     
   }
 
+  closeDialog(){
+    this.dialogRef.close();
+  }
 }
