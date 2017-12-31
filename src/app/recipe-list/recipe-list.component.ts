@@ -11,7 +11,7 @@ import { RecipeDetailsComponent } from '../recipe-details/recipe-details.compone
 })
 export class RecipeListComponent implements OnInit {
 
-  constructor(private dataService: RecipeDataService, public recipeViewDialog: MatDialog,) { }
+  constructor(public dataService: RecipeDataService, public recipeViewDialog: MatDialog,) { }
 
   ngOnInit() {
   }
